@@ -1,16 +1,17 @@
 ## communityprojectH
 
-## Setup
+## Setup & Installation
 
 ### Frontend - React
 
-- ```cd Frontend```
+- ```cd Frontend``` to go into Frontend folder
 - ```npm install``` to install dependencies
 - ```npm run dev``` to run react
 
 ### Backend - Flask
 
 - ```pipenv shell``` to start/install pipenv
+- ```pipenv install Pipfile``` to install
 - ```python Run.py``` to run flask
 - ```exit``` to exit pipenv
 
