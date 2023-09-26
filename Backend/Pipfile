@@ -9,6 +9,8 @@ flask-cors = "*"
 werkzeug = "*"
 flask-jwt-extended = "*"
 importlib-metadata = "*"
+pipfile = "*"
+flask-sqlalchemy = "*"
 
 [dev-packages]
 
@@ -17,3 +19,6 @@ python_version = "3.9"
 
 [scripts]
 dev = "bash -c \"export FLASK_ENV='development' && flask run --host=0.0.0.0\""
+
+[pipenv]
+allow_prereleases = true
