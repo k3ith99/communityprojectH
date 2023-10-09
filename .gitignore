@@ -28,3 +28,5 @@ package-lock.json
 # python flask
 Pipfile.lock
 instance
+
+API_KEY

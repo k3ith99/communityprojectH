@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from os import path
 
 from .Routes import routes
+from .itinerary import itinerary
 
 db = SQLAlchemy()
 DB_NAME = "database.db"
@@ -17,6 +18,7 @@ def create_app():
     db.init_app(app)
 
     app.register_blueprint(routes, url_prefix='/')
+    app.register_blueprint(itinerary, url_prefix='/itinerary')
 
     create_database(app)
 
