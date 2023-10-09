@@ -7,8 +7,11 @@ name = "pypi"
 flask = "*"
 flask-cors = "*"
 werkzeug = "*"
-flask-jwt-extended = "*"
+flask-jwt-extended = "4.0.0"
 importlib-metadata = "*"
+pipfile = "*"
+flask-sqlalchemy = "*"
+cryptography = "*"
 
 [dev-packages]
 
@@ -17,3 +20,6 @@ python_version = "3.9"
 
 [scripts]
 dev = "bash -c \"export FLASK_ENV='development' && flask run --host=0.0.0.0\""
+
+[pipenv]
+allow_prereleases = true
