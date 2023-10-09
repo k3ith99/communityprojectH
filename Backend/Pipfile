@@ -11,7 +11,9 @@ flask-jwt-extended = "4.0.0"
 importlib-metadata = "*"
 pipfile = "*"
 flask-sqlalchemy = "*"
+openai = "*"
 cryptography = "*"
+
 
 [dev-packages]
 
