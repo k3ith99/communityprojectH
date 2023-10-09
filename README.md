@@ -11,7 +11,7 @@
 ### Backend - Flask
 
 - ```pipenv shell``` to start/install pipenv
-- ```pipenv install Pipfile``` to install
+- ```pipenv install ``` to install
 - ```python Run.py``` to run flask
 - ```exit``` to exit pipenv
 
