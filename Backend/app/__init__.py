@@ -3,8 +3,10 @@ from flask_cors import CORS
 from os import path
 from flask_jwt_extended import JWTManager
 from .Routes import routes
-from .Config import db, DB_NAME
-from .Models import Users
+
+db = SQLAlchemy()
+DB_NAME = "database.db"
+
 def create_app():
     #add db init and auth here
     app = Flask(__name__)
@@ -13,9 +15,9 @@ def create_app():
 
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     db.init_app(app)
- 
-    app.register_blueprint(routes)
-    app.config.from_pyfile('Config.py')
+
+    app.register_blueprint(routes, url_prefix='/')
+    app.register_blueprint(itinerary, url_prefix='/itinerary')
 
     create_database(app)
 
