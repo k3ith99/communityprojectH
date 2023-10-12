@@ -2,7 +2,7 @@ from flask import Blueprint,request, jsonify, Flask
 from flask_cors import CORS
 from werkzeug import exceptions
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_jwt_extended import create_access_token, jwt_required, create_refresh_token, verify_jwt_in_request,get_jwt_identity, decode_token, JWTManager, get_jwt
+from flask_jwt_extended import create_access_token, jwt_required, create_refresh_token, get_jwt_identity, decode_token, JWTManager, get_jwt
 from datetime import timedelta
 from .Models import Users
 from .Config import db
@@ -69,7 +69,7 @@ def login():
 
 #Access user info
 @routes.route("/account", methods = ['GET'])
-@jwt_required(verify_type=False)
+@jwt_required()
 def account():
     current_user = get_jwt_identity()
     user = Users.query.filter_by(email=current_user).first()
