@@ -13,6 +13,7 @@ pipfile = "*"
 flask-sqlalchemy = "*"
 openai = "*"
 cryptography = "*"
+jinja2 = "*"
 
 [dev-packages]
 

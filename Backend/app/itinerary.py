@@ -20,7 +20,7 @@ def get_itinerary():
 
         print(travel_to)
 
-        return 202
+        return "works"
 
     except:
         return {404: 'Failed to retreive itinerary data'}
