@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Itinerary(props){
+function Itinerary(){
 
     const [travelTo, setTravelTo] = useState('')
     const [travelFrom, setTravelFrom] = useState('')
