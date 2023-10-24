@@ -27,3 +27,16 @@ class Users(db.Model):
             'password': self.password,
             'address': self.address
         }
+
+# contains the options user can select?
+class Destination(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.String(100))
+    country = db.Column(db.String(150))
+    stars = db.Column(db.Integer)
+
+# class Itinerary(db.Model):
+#     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+#     name = db.Column(db.String(100))
+#     country = db.Column(db.String(150))
+#     stars = db.Column(db.Integer)
