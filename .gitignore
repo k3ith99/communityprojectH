@@ -26,7 +26,7 @@ package-lock.json
 *.sw?
 
 # python flask
-Pipfile.lock
+Backend/Pipfile.lock
 instance
 
 API_KEY
