@@ -1,26 +1,29 @@
-from flask import Flask, Blueprint, request
+from flask import Flask, Blueprint, request, json
 
 # from Backend.OpenAI.main import .
 
 itinerary = Blueprint('itinerary', __name__) 
 
-@itinerary.route("/")
+@itinerary.route("/itinerary")
 def default():
     return "itinerary"
 
-@itinerary.route("/itinerary_form", methods=['GET'])
+@itinerary.route("/itinerary_form", methods=['GET', 'POST'])
 def get_itinerary():
     try:
-        travel_to = request.form.get('travel-to')
-        travel_from = request.form.get('travel-from')
-        start_date = request.form.get('start-date')
-        end_date = request.form.get('end-date')
-        people = request.form.get('people')
-        things_to_note = request.form.get('things-to-note')
+        # travel_to = request.form.get('travel-to')
+        # travel_from = request.form.get('travel-from')
+        # leave_date = request.form.get('leave-date')
+        # return_date = request.form.get('return-date')
+        # people = request.form.get('people')
+        # things_to_note = request.form.get('things-to-note')
 
-        print(travel_to)
+        request_data = json.loads(request.data)
 
-        return 202
+        # retrieve item from frontend by request_data['ID']
+        print(request_data['travelTo'])
+
+        return {200: "works"}
 
     except:
         return {404: 'Failed to retreive itinerary data'}

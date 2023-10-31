@@ -13,9 +13,11 @@ pipfile = "*"
 flask-sqlalchemy = "*"
 openai = "*"
 cryptography = "*"
+jinja2 = "*"
+markupsafe = "2.0.1"
+sqlalchemy = "1.4"
 
-
-[dev-packages]
+[dev-packages] 
 
 [requires]
 python_version = "3.9"

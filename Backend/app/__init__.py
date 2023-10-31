@@ -11,13 +11,14 @@ from .Models import Users
 def create_app():
     #add db init and auth here
     app = Flask(__name__)
+    CORS(app)
     JWTManager(app)
 
 
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     db.init_app(app)
 
-    app.register_blueprint(itinerary, url_prefix='/itinerary')
+    app.register_blueprint(itinerary, url_prefix='/')
     app.register_blueprint(routes)
     
     app.config.from_pyfile('Config.py')
